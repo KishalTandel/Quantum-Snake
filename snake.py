@@ -77,7 +77,7 @@ pygame.time.set_timer(FOOD_MOVE_EVENT, 300)
 def spawn_barriers():
     global barriers
     barriers = []
-    while len(barriers) <6:
+    while len(barriers) <8:
         x = random.randint(0, (WIDTH - GRID_SIZE * 4) // GRID_SIZE) * GRID_SIZE
         y = random.randint(0, (HEIGHT - GRID_SIZE * 4) // GRID_SIZE) * GRID_SIZE
         if (x <= 300 or 320 <= x <= 520) and (y <= 300 or 320 <= y <= 520) and all(abs(x - bx) >= 70 and abs(y - by) >= 70 for bx, by in barriers):
