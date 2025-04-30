@@ -2,10 +2,10 @@
 Modelled on One-Dimensional Quantum Tunneling
 
 QUANTUM SNAKE
-A classic snake game with a quantum twist, featuring the following:
-1) A classical snake
+An interactive Python model integrating Snake-like mechanics with tunneling phenomenon, featuring the following:
+1) A classic snake
 2) Potential barriers with constant potential throughout
-3) A quantum food particle, whose motion is constrained in one dimension at a time
+3) A quantum food particle constrained to one-dimensional motion
 
 Developed by by Kishal Tandel on April 23, 2025.
 
@@ -202,7 +202,7 @@ def attempt_tunnel():
     eta = random.uniform(0,3)      # eta=E/V0
     hbar=1.055*10**(-34)           # Reduced Planck's constant (J.s)
     
-    # For clarity, read the paper: 'One-Dimensional Quantum Tunneling' at https://docs.google.com/viewerng/viewer?url=https://raw.githubusercontent.com/KishalTandel/Papers/refs/heads/main/One-Dimensional+Quantum+Tunneling.pdf
+    # For derivation of the formulae used here, read the paper: 'One-Dimensional Quantum Tunneling' at https://docs.google.com/viewerng/viewer?url=https://raw.githubusercontent.com/KishalTandel/Papers/refs/heads/main/One-Dimensional+Quantum+Tunneling.pdf
     if eta < 1:
         kappa = np.sqrt(2 * m * V0 * (1 - eta)) / hbar
         T = 1 / (1 + (np.sinh(kappa * a))**2 / (4 * eta * (1 - eta)))
